@@ -7,23 +7,25 @@ Welcome to the Playwright Workshop! This repository contains exercises and examp
 ```bash
 # 1) Unpack & enter
 unzip pw-workshop.zip && cd pw-workshop
+```
 
-# 2) Install dependencies & browsers
-Install Node.js
-🔹 Visit: https://nodejs.org
+### 2) Install Node.js
 
-🔹 Download the LTS (Long-Term Support) version—it's more stable.
-🔹 Install like a regular program (Next → Next → Finish).
-🔹 After installation, in the terminal, check:
+- Visit: https://nodejs.org
+- Download the LTS (Long-Term Support) version
+- Install like a regular program (Next → Next → Finish)
 
+Verify installation:
+
+```bash
 node -v
+```
+
+Install dependencies and browsers:
+
+```bash
 npm install
 npx playwright install
-
-# 3) Run tests
-npm test
-npm run test:ui
-npm run report
 ```
 
 ## Workshop Tasks
@@ -64,17 +66,7 @@ Extend the shopping cart test with additional functionality.
 ## Adding Tests During Workshop
 
 Add new `*.spec.ts` files under `tests/` directory or complete the existing `tests/exercises/00-first-test.spec.ts` file.
-Add new page objects under `pages/`
-
-## Project Structure
-
-```
-tests/
-├── exercises/
-│   └── 00-first-test.spec.ts
-└── smoke/
-    └── example.spec.ts
-```
+Add new page objects under `pages/`.
 
 ## Available Scripts
 
