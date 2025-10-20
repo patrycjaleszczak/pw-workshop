@@ -1,34 +1,83 @@
 # Playwright Workshop Starter
 
-Minimal scaffold ready for your attendees. Covers steps 1–5 from the setup guide.
+Welcome to the Playwright Workshop! This repository contains exercises and examples to help you learn Playwright testing with TypeScript.
 
-## What’s included
-- Node project with Playwright as a dev dependency (install step needed)
-- TypeScript, ESLint, Prettier
-- Basic `playwright.config.ts`
-- Example smoke test + empty exercise
-- Handy npm scripts
+## Quick Start
 
-## Quick start
 ```bash
-# 1) unpack & enter
+# 1) Unpack & enter
 unzip pw-workshop.zip && cd pw-workshop
 
-# 2) install deps & browsers
+# 2) Install dependencies & browsers
+Install Node.js
+🔹 Visit: https://nodejs.org
+
+🔹 Download the LTS (Long-Term Support) version—it's more stable.
+🔹 Install like a regular program (Next → Next → Finish).
+🔹 After installation, in the terminal, check:
+
+node -v
 npm install
 npx playwright install
 
-# 3) run tests
+# 3) Run tests
 npm test
 npm run test:ui
 npm run report
 ```
 
-## Add tests during the workshop
-Add new `*.spec.ts` files under `tests/` or complete `tests/exercises/00-first-test.spec.ts`.
+## Workshop Tasks
 
-## Lint & format
-```bash
-npm run lint
-npm run format
+### 1. Basic Task: Login Test with Page Object Model
+Create a login test using the Page Object Model pattern.
+
+**Target URL:** https://the-internet.herokuapp.com/login
+
+**Requirements:**
+- Implement Page Object Model
+- Create a login test
+- Focus on proper page object structure
+
+### 2. Advanced Task: Shopping Cart Testing
+Create comprehensive tests for shopping cart functionality.
+
+**Target URL:** https://www.saucedemo.com/
+
+**Requirements:**
+- Test adding items to basket
+- Verify correct items are added
+- Test removing items from basket
+- Verify basket is empty after removal
+- Focus on page objects
+
+### 3. Enhanced Shopping Cart Test
+Extend the shopping cart test with additional functionality.
+
+**Requirements:**
+- Randomly select users from a given list for login
+- Sort products from low to high price
+- Add at least 2 items to cart
+- Complete checkout process
+- Add appropriate value checking (expect statements) throughout
+- Maintain focus on page objects
+
+## Adding Tests During Workshop
+
+Add new `*.spec.ts` files under `tests/` directory or complete the existing `tests/exercises/00-first-test.spec.ts` file.
+Add new page objects under `pages/`
+
+## Project Structure
+
 ```
+tests/
+├── exercises/
+│   └── 00-first-test.spec.ts
+└── smoke/
+    └── example.spec.ts
+```
+
+## Available Scripts
+
+- `npm test` - Run tests in headless mode
+- `npm run test:ui` - Run tests with Playwright UI
+- `npm run report` - Generate test report
